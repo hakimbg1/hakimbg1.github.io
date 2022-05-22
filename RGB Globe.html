@@ -152,11 +152,15 @@ nous avons pris seulement les parties dont nous avons besoin pour faire notre pr
 					  padding: 2px;
 					  text-align: center;
 					}
+					.responsive {
+					  width: 100%;
+					  height: auto;
+					}
 				</style>
-	<div class="pic"> <img src="assets/Projet/RGB Glob/wiring_rgb_glob.jpg" alt="RGB globe wiring" text-align: center ><p class="pictxt">RGB globe wiring</p><img src="assets/Projet/RGB Glob/PCB front.png" alt="PCB Front" text-align: center ><p class="pictxt">PCB front</p><img src="assets/Projet/RGB Glob/PCB back.png" alt="PCB Back" text-align: center ><p class="pictxt">PCB Back</p></div>
+	<div class="pic"> <img src="assets/Projet/RGB Glob/wiring_rgb_glob.jpg" alt="RGB globe wiring" text-align: center class="responsive"><p class="pictxt">RGB globe wiring</p><img src="assets/Projet/RGB Glob/PCB front.png" alt="PCB Front" text-align: center class="responsive"><p class="pictxt">PCB front</p><img src="assets/Projet/RGB Glob/PCB back.png" alt="PCB Back" text-align: center class="responsive"><p class="pictxt">PCB Back</p></div>
 	
 					<li><i class="bi bi-chevron-right" style="color:#149ddd"></i><strong>Partie application : </strong>pour la partie d'application java il a 2 fonctions principales <i>la première </i>est la possibilité de créer une image en choisissant une couleur à partir d'une palettes et de choisir de colorer chaque pixel par un couleur au choix pour créer une table de 0 et 1 qui peut être téléchargé dans le code Arduino et <i>la seconde</i> est de télécharger une image de la redimensionner afin qu'il puisse s'adapter à une certaine dimension et puis vérifier s'il ya l'existence de rouge, bleu et vert sur chaque pixel puis la transformer a une table de 0 et 1.</li><br/>
-					<div class="pic"> <img src="assets/Projet/RGB Glob/application.PNG" alt="RGB globe wiring" text-align: center ><p class="pictxt">RGB globe application </p> <img src="assets/Projet/RGB Glob/result.PNG" alt="RGB globe wiring" text-align: center ><p class="pictxt">Matrix de tableau </p></div>
+					<div class="pic"> <img src="assets/Projet/RGB Glob/application.PNG" alt="RGB globe wiring" text-align: center class="responsive"><p class="pictxt">RGB globe application </p> <img src="assets/Projet/RGB Glob/result.PNG" alt="RGB globe wiring" text-align: center class="responsive"><p class="pictxt">Matrix de tableau </p></div>
 					<p>Comme nous pouvons le voir ici, après avoir chargé l'image et appuyé sur "Load Matrix", cela nous donne un tableau de 200 lignes et 15 colonnes, ce qui signifie que nous créons une image de 200px*120px. c'est seulement possible parce que chaque colonne contient 8 sorties que le registre à décalage 74hc595 peut prendre et nous en avons 15. Aussi nous essayons de faire clignoter chaque led 200 fois en une seul rotation c'est ce que nous avons définie dans le code de l'Arduino.</p>
 					<p><strong>certains problèmes que nous avons rencontrer :</strong>
 						tout d'abord, nous voulions créer un programme qui peut même contrôler l'intensité d'une lumière, donc au lieu de 0 signifie éteint et 1 allumé, nous voulions l'échelonner de 0 à 255 pour ajuster la combinaison des 3 couleurs principales (RGB) afin d'obtenir plus de varieté de couleurs, malheureusement nous avons abandonné l'idée parce que nous n'avions pas assez de temps pour creusé dessus.<br/>
